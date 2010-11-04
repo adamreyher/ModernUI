@@ -1,9 +1,9 @@
 Licenses
 ********
 
-In order to preserve the license of phpBB3, the files unless otherwise noted
-below (those which are not part of the standard phpBB package) are released
-under the GPLv2. See COPYING for the complete text of the GPLv2 license.
+In order to preserve the license of phpBB3, the files in this package, unless
+otherwise noted below, are released under the GPLv2. See COPYING for the
+complete text of the GPLv2 license.
 
 MIT License
 -----------
@@ -28,8 +28,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-Other Credits
+Full Credits
 -------------
+
+### phpBB3 prosilver/subSilver2
+Files in this package contain elements from both prosilver and subSilver2
+
+- Copyright: 2000, 2002, 2005, 2007 phpBB Group <http://www.phpbb.com>
+- License: GNU General Public License, version 2 (GPLv2)
+- License URL: <http://www.opensource.org/licenses/gpl-2.0.php>
 
 ### ModernUI Custom External Libraries
 All original external libraries (JS, CSS, etc) utilized by ModernUI
