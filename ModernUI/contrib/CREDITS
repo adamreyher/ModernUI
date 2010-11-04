@@ -42,7 +42,7 @@ Files in this package contain elements from both prosilver and subSilver2
 All original external libraries (JS, CSS, etc) utilized by ModernUI
 
 - Files:    ModernUI/template/ModernUI.js
-            ModernUI/theme/ModernUI.css
+            ModernUI/theme/stylesheet.css
 - Copyright: 2010 Adam Reyher, Titanium Studio <http://www.titaniumstudio.com>
 - License: MIT License
 - License URL: <http://www.opensource.org/licenses/mit-license.php>
