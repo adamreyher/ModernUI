@@ -30,3 +30,19 @@
     </head>
 
     <body class="{S_CONTENT_DIRECTION}">
+        <div id="wrap">
+            <div id="top-menu">
+                <div id="top-menu-left">
+		    <ul id="social-icons-top">
+                        <!-- IF S_ENABLE_FEEDS_OVERALL --><li id="feed-icon-top"><a href="{U_FEED}" title="{L_FEED} - {SITENAME}"><img src="{T_IMAGESET_PATH}/feed-sm.png" alt="{L_FEED}" /></a></li><!-- ENDIF -->
+                        <!-- IF $FB_DISPLAY eq 'on' and $FB_URL --><li id="facebook-icon-top"><a href="{$FB_URL}" title="{$FB_TEXT}"><img src="{T_IMAGESET_PATH}/fb-sm.png" alt="{$FB_TEXT}" /></a></li><!-- ENDIF -->
+			<!-- IF $TWITTER_DISPLAY eq 'on' and $TWITTER_URL --><li id="twitter-icon-top"><a href="{$TWITTER_URL}" title="{$TWITTER_TEXT}"><img src="{T_IMAGESET_PATH}/twitter-sm.png" alt="{TWITTER_TEXT}" /></a></li><!-- ENDIF -->
+                    </ul>
+		    <div id="search-top">
+			<form action="{U_SEARCH}" method="post">
+				<input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
+				<input value="{L_SEARCH}" type="submit" />
+			</form>
+		    </div>
+                </div>
+            </div>
