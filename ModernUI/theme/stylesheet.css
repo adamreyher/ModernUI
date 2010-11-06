@@ -50,6 +50,7 @@ div#top-menu a {
 }
 div#top-menu a:hover {
 	color: #eb8021;
+	cursor: pointer;
 }
 div#top-menu span {
 	height: 18px;
