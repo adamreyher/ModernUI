@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}" dir="{S_CONTENT_DIRECTION}">
 	<head>
+		<!-- INCLUDE ModernUI_config.html -->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta http-equiv="content-language" content="{S_USER_LANG}" />
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" />
@@ -36,10 +37,6 @@
 			<div id="top-menu">
 				<div id="top-menu-left">
 					<ul id="social-icons-top">
-						<!-- DEFINE $FB_DISPLAY = 'on' -->
-						<!-- DEFINE $FB_URL = '#' -->
-						<!-- DEFINE $TWITTER_DISPLAY = 'on' -->
-						<!-- DEFINE $TWITTER_URL = '#' -->
 						<!-- IF S_ENABLE_FEEDS_OVERALL --><li id="feed-icon-top"><a href="{U_FEED}" title="{L_FEED} - {SITENAME}"><img src="{T_IMAGESET_PATH}/feed-sm.png" alt="{L_FEED}" /></a></li><!-- ENDIF -->
 						<!-- IF $FB_DISPLAY eq 'on' and $FB_URL --><li id="facebook-icon-top"><a href="{$FB_URL}" title="{$FB_TEXT}"><img src="{T_IMAGESET_PATH}/fb-sm.png" alt="{$FB_TEXT}" /></a></li><!-- ENDIF -->
 						<!-- IF $TWITTER_DISPLAY eq 'on' and $TWITTER_URL --><li id="twitter-icon-top"><a href="{$TWITTER_URL}" title="{$TWITTER_TEXT}"><img src="{T_IMAGESET_PATH}/twitter-sm.png" alt="{TWITTER_TEXT}" /></a></li><!-- ENDIF -->
@@ -47,8 +44,18 @@
 					<div id="search-top">
 						<form action="{U_SEARCH}" method="post">
 							<input class="textbox" name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
-							<input class="quick-submit" value="" type="submit" />
+							<input class="quick-submit" value="" type="submit" title="{L_SEARCH}" />
 						</form>
 					</div>
+				</div>
+				<div id="top-menu-right">
+					<ul id="navbar-top">
+						<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+						<!-- IF S_DISPLAY_PM --><li id="pm-top"><a href="{U_PRIVATEMSGS}" title="{L_PRIVATE_MESSAGES}"><span>{PRIVATE_MESSAGE_INFO}</span></a></li><!-- ENDIF -->
+						<li id="ucp-top"><a href="{U_PROFILE}" title="{L_PROFILE}"><span>{S_USERNAME}</span></a></li>
+						<li id="login-top"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}"><span><!-- IF S_USER_LOGGED_IN -->{L_LOGOUT}<!-- ELSE -->{L_LOGIN}<!-- ENDIF --></span></a></li>
+						<!-- ENDIF -->
+						<li id="help-top"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}"><span>&nbsp;</span></a></li>
+					</ul>
 				</div>
 			</div>
