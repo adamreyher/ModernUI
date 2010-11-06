@@ -10,3 +10,71 @@
  * This file contains the ModernUI CSS selectors
  */
 
+ /*
+  * Overall Elements
+ */
+body {
+	margin: 0;
+}
+
+div#wrap {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -30px;
+}
+img {
+	border: 0;
+}
+
+/*
+ * Top Menu
+*/
+
+div#top-bar {
+	margin: 0;
+	width: 100%;
+	height: 30px;
+	background: #4e4e4e;
+}
+div#top-menu {
+	height: 18px;
+	margin: 6px 0 0 0;
+	padding: 0;
+}
+div#top-menu-left {
+	float: left;
+}
+div#top-menu-right {
+	float: right;
+}
+ul#social-icons-top {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+}
+ul#social-icons-top li {
+	display: inline;
+	padding-right: 14px;
+}
+div#search-top {
+	float: left;
+	margin: 0;
+}
+
+div#search-top input.textbox {
+	width: 110px;
+	height: 16px;
+	border: 0;
+	float: left;
+}
+input.quick-submit {
+	width: 19px;
+	height: 18px;
+	margin-left: 5px;
+	border: 0;
+	background: transparent url('../imageset/quicksearch-sm.png') no-repeat center;
+	cursor: pointer;
+	float: left;
+}
