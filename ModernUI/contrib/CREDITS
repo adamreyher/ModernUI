@@ -41,17 +41,17 @@ Files in this package contain elements from both prosilver and subSilver2
 ### ModernUI Custom External Libraries
 All original external libraries (JS, CSS, etc) utilized by ModernUI
 
-- Files:    ModernUI/template/ModernUI.js
-            ModernUI/theme/stylesheet.css
+- Files:	ModernUI/template/ModernUI.js
+			ModernUI/theme/stylesheet.css
 - Copyright: 2010 Adam Reyher, Titanium Studio <http://www.titaniumstudio.com>
 - License: MIT License
 - License URL: <http://www.opensource.org/licenses/mit-license.php>
 
 ### ModernUI Images
 
-- Files:    ModernUI/imageset/ui-*.*
-            ModernUI/imageset/en/*.*
-            ModernUI/theme/images/ui-*.*
+- Files:	ModernUI/imageset/ui-*.*
+			ModernUI/imageset/en/*.*
+			ModernUI/theme/images/ui-*.*
 - Copyright: 2010 Adam Reyher, Titanium Studio <http://www.titaniumstudio.com>
 - License: http://creativecommons.org/licenses/by-sa/3.0/
 - License URL: http://creativecommons.org/licenses/by-sa/3.0/
@@ -75,24 +75,24 @@ development. jQuery is designed to change the way that you write JavaScript.
 
 ### Rozšíøená sada sociálních ikon | Extended set of social icons
 
-- Files:    ModernUI/imageset/facebook-sm.png
-            ModernUI/imageset/feed-sm.png
-            ModernUI/imageset/twitter-sm.png
+- Files:	ModernUI/imageset/facebook-sm.png
+			ModernUI/imageset/feed-sm.png
+			ModernUI/imageset/twitter-sm.png
 - Copyright: Lenka Melèáková <http://www.profimagazin.cz>
 - License: Creative Commons Attribution-NoDerivative Works 3.0
 - License URL: <http://creativecommons.org/licenses/by-nd/3.0/>
 
 ### Sleek XP Icon Set
 
-- Files:    ModernUI/imageset/close-sm.png
-            ModernUI/imageset/help-sm.png
-            ModernUI/imageset/info-sm.png
-            ModernUI/imageset/stats-sm.png
-            ModernUI/imageset/mail-sm.png
-            ModernUI/imageset/members-sm.png
-            ModernUI/imageset/quicksearch-sm.png
-            ModernUI/imageset/search.png
-            ModernUI/imageset/ucp-sm.png
+- Files:	ModernUI/imageset/close-sm.png
+			ModernUI/imageset/help-sm.png
+			ModernUI/imageset/info-sm.png
+			ModernUI/imageset/stats-sm.png
+			ModernUI/imageset/mail-sm.png
+			ModernUI/imageset/members-sm.png
+			ModernUI/imageset/quicksearch-sm.png
+			ModernUI/imageset/search.png
+			ModernUI/imageset/ucp-sm.png
 - Copyright: <http://www.deleket.com/sleekxp.html>
 - License: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
 - License URL: http://creativecommons.org/licenses/by-nc-nd/3.0/

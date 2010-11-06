@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}" dir="{S_CONTENT_DIRECTION}">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta http-equiv="content-language" content="{S_USER_LANG}" />
-        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" />
-        {META}
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="{S_USER_LANG}" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" />
+		{META}
 
-        <title>{SITENAME} • <!-- IF S_IN_MCP -->{L_MCP} • <!-- ELSEIF S_IN_UCP -->{L_UCP} • <!-- ENDIF -->{PAGE_TITLE}</title>
+		<title>{SITENAME} • <!-- IF S_IN_MCP -->{L_MCP} • <!-- ELSEIF S_IN_UCP -->{L_UCP} • <!-- ENDIF -->{PAGE_TITLE}</title>
 
-        <link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
-        <link href="{T_THEME_PATH}/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
-        <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
-        <link href="{T_THEME_PATH}/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" />
-        <!-- ENDIF -->
-        
-        <script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.4.3.min.js"></script>
-        <script type="text/javascript" src="{T_TEMPLATE_PATH}/forum_fn.js"></script>
-        <script type="text/javascript" src="{T_TEMPLATE_PATH}/ModernUI.js"></script>
+		<link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+		<link href="{T_THEME_PATH}/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+		<!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
+		<link href="{T_THEME_PATH}/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" />
+		<!-- ENDIF -->
 
-        <!-- IF S_ENABLE_FEEDS -->
-            <!-- IF S_ENABLE_FEEDS_OVERALL --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {SITENAME}" href="{U_FEED}" /><!-- ENDIF -->
-            <!-- IF S_ENABLE_FEEDS_NEWS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_NEWS}" href="{U_FEED}?mode=news" /><!-- ENDIF -->
-            <!-- IF S_ENABLE_FEEDS_FORUMS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_ALL_FORUMS}" href="{U_FEED}?mode=forums" /><!-- ENDIF -->
-            <!-- IF S_ENABLE_FEEDS_TOPICS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_NEW}" href="{U_FEED}?mode=topics" /><!-- ENDIF -->
-            <!-- IF S_ENABLE_FEEDS_TOPICS_ACTIVE --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_ACTIVE}" href="{U_FEED}?mode=topics_active" /><!-- ENDIF -->
-            <!-- IF S_ENABLE_FEEDS_FORUM and S_FORUM_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FORUM} - {FORUM_NAME}" href="{U_FEED}?f={S_FORUM_ID}" /><!-- ENDIF -->
-            <!-- IF S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_TOPIC} - {TOPIC_TITLE}" href="{U_FEED}?f={S_FORUM_ID}&amp;t={S_TOPIC_ID}" /><!-- ENDIF -->
-        <!-- ENDIF -->
-    </head>
+		<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="{T_TEMPLATE_PATH}/forum_fn.js"></script>
+		<script type="text/javascript" src="{T_TEMPLATE_PATH}/ModernUI.js"></script>
 
-    <body class="{S_CONTENT_DIRECTION}">
-        <div id="wrap">
-            <div id="top-menu">
-                <div id="top-menu-left">
-		    <ul id="social-icons-top">
-                        <!-- IF S_ENABLE_FEEDS_OVERALL --><li id="feed-icon-top"><a href="{U_FEED}" title="{L_FEED} - {SITENAME}"><img src="{T_IMAGESET_PATH}/feed-sm.png" alt="{L_FEED}" /></a></li><!-- ENDIF -->
-                        <!-- IF $FB_DISPLAY eq 'on' and $FB_URL --><li id="facebook-icon-top"><a href="{$FB_URL}" title="{$FB_TEXT}"><img src="{T_IMAGESET_PATH}/fb-sm.png" alt="{$FB_TEXT}" /></a></li><!-- ENDIF -->
-			<!-- IF $TWITTER_DISPLAY eq 'on' and $TWITTER_URL --><li id="twitter-icon-top"><a href="{$TWITTER_URL}" title="{$TWITTER_TEXT}"><img src="{T_IMAGESET_PATH}/twitter-sm.png" alt="{TWITTER_TEXT}" /></a></li><!-- ENDIF -->
-                    </ul>
-		    <div id="search-top">
-			<form action="{U_SEARCH}" method="post">
-				<input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
-				<input value="{L_SEARCH}" type="submit" />
-			</form>
-		    </div>
-                </div>
-            </div>
+		<!-- IF S_ENABLE_FEEDS -->
+			<!-- IF S_ENABLE_FEEDS_OVERALL --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {SITENAME}" href="{U_FEED}" /><!-- ENDIF -->
+			<!-- IF S_ENABLE_FEEDS_NEWS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_NEWS}" href="{U_FEED}?mode=news" /><!-- ENDIF -->
+			<!-- IF S_ENABLE_FEEDS_FORUMS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_ALL_FORUMS}" href="{U_FEED}?mode=forums" /><!-- ENDIF -->
+			<!-- IF S_ENABLE_FEEDS_TOPICS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_NEW}" href="{U_FEED}?mode=topics" /><!-- ENDIF -->
+			<!-- IF S_ENABLE_FEEDS_TOPICS_ACTIVE --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_ACTIVE}" href="{U_FEED}?mode=topics_active" /><!-- ENDIF -->
+			<!-- IF S_ENABLE_FEEDS_FORUM and S_FORUM_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FORUM} - {FORUM_NAME}" href="{U_FEED}?f={S_FORUM_ID}" /><!-- ENDIF -->
+			<!-- IF S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_TOPIC} - {TOPIC_TITLE}" href="{U_FEED}?f={S_FORUM_ID}&amp;t={S_TOPIC_ID}" /><!-- ENDIF -->
+		<!-- ENDIF -->
+	</head>
+
+	<body class="{S_CONTENT_DIRECTION}">
+		<div id="wrap">
+			<div id="top-menu">
+				<div id="top-menu-left">
+					<ul id="social-icons-top">
+						<!-- IF S_ENABLE_FEEDS_OVERALL --><li id="feed-icon-top"><a href="{U_FEED}" title="{L_FEED} - {SITENAME}"><img src="{T_IMAGESET_PATH}/feed-sm.png" alt="{L_FEED}" /></a></li><!-- ENDIF -->
+						<!-- IF $FB_DISPLAY eq 'on' and $FB_URL --><li id="facebook-icon-top"><a href="{$FB_URL}" title="{$FB_TEXT}"><img src="{T_IMAGESET_PATH}/fb-sm.png" alt="{$FB_TEXT}" /></a></li><!-- ENDIF -->
+						<!-- IF $TWITTER_DISPLAY eq 'on' and $TWITTER_URL --><li id="twitter-icon-top"><a href="{$TWITTER_URL}" title="{$TWITTER_TEXT}"><img src="{T_IMAGESET_PATH}/twitter-sm.png" alt="{TWITTER_TEXT}" /></a></li><!-- ENDIF -->
+					</ul>
+					<div id="search-top">
+						<form action="{U_SEARCH}" method="post">
+							<input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
+							<input value="{L_SEARCH}" type="submit" />
+						</form>
+					</div>
+					</div>
+			</div>
