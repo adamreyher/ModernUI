@@ -85,6 +85,7 @@ development. jQuery is designed to change the way that you write JavaScript.
 ### Sleek XP Icon Set
 
 - Files:	ModernUI/imageset/close-sm.png
+			ModernUI/imageset/check-sm.png
 			ModernUI/imageset/help-sm.png
 			ModernUI/imageset/info-sm.png
 			ModernUI/imageset/stats-sm.png

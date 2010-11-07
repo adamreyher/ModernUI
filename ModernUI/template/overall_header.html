@@ -31,11 +31,12 @@
 	</head>
 
 	<body class="{S_CONTENT_DIRECTION}">
+		<a name="page-top"></a>
 		<div id="top-bar">
 		</div>
 		<div id="wrap">
 			<div id="top-menu">
-				<div id="top-menu-left">
+				<div class="left">
 					<ul id="social-icons-top">
 						<!-- IF S_ENABLE_FEEDS_OVERALL --><li id="feed-icon-top"><a href="{U_FEED}" title="{L_FEED} - {SITENAME}"><img src="{T_IMAGESET_PATH}/feed-sm.png" alt="{L_FEED}" /></a></li><!-- ENDIF -->
 						<!-- IF $FB_DISPLAY eq 'on' and $FB_URL --><li id="facebook-icon-top"><a href="{$FB_URL}" title="{$FB_TEXT}"><img src="{T_IMAGESET_PATH}/fb-sm.png" alt="{$FB_TEXT}" /></a></li><!-- ENDIF -->
@@ -45,17 +46,62 @@
 						<form action="{U_SEARCH}" method="post">
 							<input class="textbox" name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
 							<input class="quick-submit" value="" type="submit" title="{L_SEARCH}" />
+							{S_SEARCH_HIDDEN_FIELDS}
 						</form>
 					</div>
 				</div>
-				<div id="top-menu-right">
+				<div class="right">
 					<ul id="navbar-top">
+						<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) and not S_IS_BOT -->
+						<li id="register-top"><a href="{U_REGISTER}"><span>{L_REGISTER}</span></a></li>
+						<!-- ENDIF -->
 						<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
-						<!-- IF S_DISPLAY_PM --><li id="pm-top"><a href="{U_PRIVATEMSGS}" title="{L_PRIVATE_MESSAGES}"><span>{PRIVATE_MESSAGE_INFO}</span></a></li><!-- ENDIF -->
+						<!-- IF S_DISPLAY_PM -->
+						<li id="pm-top"><a href="{U_PRIVATEMSGS}" title="{L_PRIVATE_MESSAGES}"><span>{PRIVATE_MESSAGE_INFO}</span></a></li>
+						<!-- ENDIF -->
 						<li id="ucp-top"><a href="{U_PROFILE}" title="{L_PROFILE}"><span>{S_USERNAME}</span></a></li>
 						<li id="login-top"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}"><span><!-- IF S_USER_LOGGED_IN -->{L_LOGOUT}<!-- ELSE -->{L_LOGIN}<!-- ENDIF --></span></a></li>
 						<!-- ENDIF -->
-						<li id="help-top"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}"><span>&nbsp;</span></a></li>
+						<li id="help-top"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}"><span></span></a></li>
 					</ul>
 				</div>
 			</div>
+			<div id="header">
+				<div id="logo">
+					<a href="{U_INDEX}" title="{L_INDEX}"><h1><span>{SITENAME}</span></h1></a>
+				</div>
+				<div class="breadcrums">
+					<ul>
+						<li class="icon-home"><a href="{U_INDEX}"><span>{L_INDEX}</span></a> <!-- BEGIN navlinks --> <strong>‹</strong> <a href="{navlinks.U_VIEW_FORUM}" title="{navlinks.FORUM_NAME}">{navlinks.FORUM_NAME}</a><!-- END navlinks --></li>
+					</ul>
+				</div>
+				<div id="navbar-alt">
+					<!-- IF S_DISPLAY_SEARCH -->
+					<div class="left">
+						<ul>
+							<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
+							<!-- IF U_RESTORE_PERMISSIONS --> •
+							<li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li>
+							<!-- ENDIF -->
+						</ul>
+					</div>
+					<!-- ENDIF -->
+					<div class="right">
+						<!-- IF not S_IS_BOT-->
+						<ul>
+							<!-- IF S_DISPLAY_MEMBERLIST -->
+							<li class="members-icon padleft"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}"><span>{L_MEMBERLIST}</span></a></li><!-- ENDIF -->
+							<!-- ENDIF -->
+							<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+							<li class="search-icon padleft"><a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}"><span>{L_SEARCH}</span></a></li>
+							<!-- ENDIF -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="main-content">
+				<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
+				<div id="information" class="rules">
+					<strong>{L_INFORMATION}:</strong> {L_BOARD_DISABLED}
+				</div>
+				<!-- ENDIF -->
