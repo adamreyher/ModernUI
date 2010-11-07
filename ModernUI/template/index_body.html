@@ -1,3 +1,42 @@
 <!-- INCLUDE overall_header.html -->
-		&nbsp;
+				<div id="timebar">
+					<div class="left">
+						<p class="content currenttime"><span>{CURRENT_TIME}</span></p>
+					</div>
+					<!-- IF S_USER_LOGGED_IN -->
+					<div class="right">
+						<p class="content">{LAST_VISIT_DATE}</p>
+					</div>
+					<!-- ENDIF -->
+				</div>
+				<!-- IF U_MCP -->
+				<div id="mcpbar">
+						<p class="content left">[ <a href="{U_MCP}">{L_MCP}</a> ]</p>
+				</div>
+				<!-- ENDIF -->
+				<!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
+				<div id="topicslinks">
+					<div class="left">
+						<ul class="inlinelist">
+							<!-- IF S_DISPLAY_SEARCH -->
+								<li><a href="{U_SEARCH_UNANSWERED}" class="alt">{L_SEARCH_UNANSWERED}</a><!-- IF S_USER_LOGGED_IN --> • <a href="{U_SEARCH_UNREAD}" class="alt">{L_SEARCH_UNREAD}</a> • <a href="{U_SEARCH_NEW}" class="alt">{L_SEARCH_NEW}</a><!-- ENDIF --> • <a href="{U_SEARCH_ACTIVE_TOPICS}" class="alt">{L_SEARCH_ACTIVE_TOPICS}</a></li>
+							<!-- ENDIF -->
+						</ul>
+					</div>
+					<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
+					<div class="right">
+						<ul class="inlinelist">
+							<li><a href="{U_MARK_FORUMS}" class="alt">{L_MARK_FORUMS_READ}</a></li>
+						</ul>
+					</div>
+					<!-- ENDIF -->
+				</div>
+				<!-- ENDIF -->
+
+				<!-- INCLUDE forumlist_body.html -->
+
+
+
+
+
 		<!-- INCLUDE overall_footer.html -->
