@@ -334,6 +334,12 @@ div#statistics span {
 	background: url('../imageset/stats-sm.png') no-repeat;
 	display: block;
 }
+div#birthdays span {
+	height: 16px;
+	padding-left: 20px;
+	background: url('../imageset/icon-birthday.png') no-repeat;
+	display: block;
+}
 
 /*
  * TEH FORUMS!
