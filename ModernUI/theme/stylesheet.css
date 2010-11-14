@@ -33,6 +33,17 @@ a.alt {
 a.alt:hover {
 	color: #eb8021;
 }
+h3 {
+	color: #4e4e4e;
+	border-bottom: 1px solid #4e4e4e;
+	padding-bottom: 3px;
+}
+h3 a {
+	color: #4e4e4e;
+}
+h3 a:hover {
+	color: #eb8021;
+}
 p {
 	margin: 5px 0px;
 }
@@ -267,6 +278,16 @@ div.breadcrums a span:hover {
 }
 
 /*
+ * Various list images
+ */
+ div#whosonline span {
+	 height: 16px;
+	 padding-left: 23px;
+	 background: url('../imageset/info-sm.png') no-repeat;
+	 display: block;
+}
+
+/*
  * phpBB Elements Misc
  */
 .rules {
@@ -306,6 +327,10 @@ div#information div {
 #topicslinks {
 	clear: both;
 	margin: 50px 0 5px 0;
+}
+#whosonline, #birthdays, #statistics {
+	clear: both;
+	padding: 15px 0 0 0;
 }
 
 /*
