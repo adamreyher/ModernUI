@@ -35,8 +35,33 @@
 
 				<!-- INCLUDE forumlist_body.html -->
 
+				<!-- IF S_DISPLAY_ONLINE LIST-->
+				<div id="whosonline">
+					<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+					<p>
+						{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}
+					</p>
+					<p>
+						{LOGGED_IN_USER_LIST}
+						<!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF -->
+					</p>
+				</div>
+				<!-- ENDIF -->
+				<!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
+				<div id="birthdays">
+					<h3>{L_BIRTHDAYS}</h3>
+					<p>
+						<!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+					</p>
+				</div>
+				<!-- ENDIF -->
+				<div id="statistics">
+					<!-- IF NEWEST_USER -->
+					<h3>{L_STATISTICS}</h3>
+					<p>
+						{TOTAL_POSTS} • {TOTAL_TOPICS} • {TOTAL_USERS} • {NEWEST_USER}
+					</p>
+				</div>
+				<!-- ENDIF -->
 
-
-
-
-		<!-- INCLUDE overall_footer.html -->
+				<!-- INCLUDE overall_footer.html -->
