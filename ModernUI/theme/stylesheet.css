@@ -278,16 +278,6 @@ div.breadcrums a span:hover {
 }
 
 /*
- * Various list images
- */
- div#whosonline span {
-	 height: 16px;
-	 padding-left: 23px;
-	 background: url('../imageset/info-sm.png') no-repeat;
-	 display: block;
-}
-
-/*
  * phpBB Elements Misc
  */
 .rules {
@@ -331,6 +321,18 @@ div#information div {
 #whosonline, #birthdays, #statistics {
 	clear: both;
 	padding: 15px 0 0 0;
+}
+ div#whosonline span {
+	 height: 16px;
+	 padding-left: 20px;
+	 background: url('../imageset/info-sm.png') no-repeat;
+	 display: block;
+}
+div#statistics span {
+	height: 16px;
+	padding-left: 20px;
+	background: url('../imageset/stats-sm.png') no-repeat;
+	display: block;
 }
 
 /*

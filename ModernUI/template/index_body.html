@@ -37,7 +37,7 @@
 
 				<!-- IF S_DISPLAY_ONLINE_LIST-->
 				<div id="whosonline">
-					<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}"><span>{L_WHO_IS_ONLINE}</span></a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+					<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}"><span>{L_WHO_IS_ONLINE}</span></a></h3><!-- ELSE --><h3><span>{L_WHO_IS_ONLINE}</span></h3><!-- ENDIF -->
 					<p>
 						{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}
 					</p>
@@ -57,7 +57,7 @@
 				<!-- ENDIF -->
 				<div id="statistics">
 					<!-- IF NEWEST_USER -->
-					<h3>{L_STATISTICS}</h3>
+					<h3><span>{L_STATISTICS}</span></h3>
 					<p>
 						{TOTAL_POSTS} • {TOTAL_TOPICS} • {TOTAL_USERS} • {NEWEST_USER}
 					</p>
