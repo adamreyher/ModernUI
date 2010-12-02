@@ -382,6 +382,7 @@ span.team {
 }
 .catheader .forumhead {
 	width: 540px;
+	font-weight: bold;
 }
 .catheader .topicshead, .catheader .postshead {
 	width: 60px;
