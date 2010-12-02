@@ -1,0 +1,33 @@
+ModernUI
+Copyright 2010 Adam Reyher, 2010 Titanium Studio
+http://www.titaniumstudio.com
+
+This file is licensed under the MIT license
+http://www.opensource.org/licenses/mit-license.php
+See ../contrib/CREDITS for licensing details
+
+This file contains custom configuration instructions for ModernUI.
+
+*******INSTRUCTIONS*******
+
+TOP MENU SOCIAL MEDIA ICONS
+ModernUI can be configured to show Facebook and Twitter icons in the top
+left corner of the style, next to the Feed icon and search box.
+In order to enable these and configure them to link to your Facebook and/or
+Twitter page, you'll need to enable the variables below and set the URLs.
+Firstly, set $FB_DISPLAY or $TWITTER_DISPLAY to 'on'
+
+EXAMPLE: <!-- DEFINE $FB_DISPLAY = 'on' -->
+
+Then, change the $FB_URL and $TWITTER_URL variables to your profile URL
+
+EXAMPLE: <!-- DEFINE $FB_URL = 'http://www.twitter.com/phpbb' -->
+
+The third variable, $FB_TEXT and $TWITTER_TEXT are optional. This is the text
+that displays as an alternate if the images can't be loaded, the text that
+displays on mouseover of the image.
+
+It is recommended that you alter these to your primary language.
+
+Additional support can be obtained at:
+http://www.titaniumstudio.com/forums/
