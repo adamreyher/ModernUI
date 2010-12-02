@@ -245,10 +245,15 @@ li.search-icon span {
  */
 
 div.breadcrums {
+	clear: both;
 	height: 16px;
 	padding: 6px 0;
 	border-top: 1px solid #4e4e4e;
 	border-bottom: 1px solid #4e4e4e;
+}
+div.breadcrums2 {
+	clear: both;
+	margin-top: 20px;
 }
 div.breadcrums ul {
 	padding: 0;
@@ -267,13 +272,13 @@ div.breadcrums a:hover {
 	color: #eb8021;
 	text-decoration: none;
 }
-div.breadcrums a span {
+div.breadcrums a span.home {
 	height: 16px;
 	padding-left: 23px;
 	background: url('../imageset/home-sm.png') no-repeat;
 	display: block;
 }
-div.breadcrums a span:hover {
+div.breadcrums a span.home:hover {
 	cursor: pointer;
 }
 
@@ -299,9 +304,9 @@ div#information div {
 }
 .currenttime span {
 	height: 18px;
-	padding-left: 22px;
+	padding-left: 20px;
 	background: url('../imageset/clock-sm.png') no-repeat;
-	display: block;
+	display: inline-block;
 }
 #timebar {
 	clear: both;
@@ -339,6 +344,20 @@ div#birthdays span {
 	padding-left: 20px;
 	background: url('../imageset/icon-birthday.png') no-repeat;
 	display: block;
+}
+span.delete {
+	height: 16px;
+	padding-left: 20px;
+	background: url('../imageset/delete-sm.png') no-repeat;
+	display: inline-block;
+	margin-right: 8px;
+}
+span.team {
+	height: 16px;
+	padding-left: 23px;
+	background: url('../imageset/team-sm.png') no-repeat;
+	display: inline-block;
+	margin-right: 8px;
 }
 
 /*
@@ -418,4 +437,28 @@ span.forumtitle-text {
 	width: 20px;
 	height: 30px;
 	background: transparent url('../imageset/forum-div.png') top center no-repeat;
+}
+
+/*
+ * TEH FORUMS!
+ */
+#footer {
+	 clear: both;
+	 width: 100%;
+	 margin: 20px 0 0 0;
+	 padding: 10px 0;
+	 background: #4e4e4e;
+	 text-align: center;
+	 color: #bdbdbd;
+}
+#footer a.acp {
+	font-weight: bold;
+	color: #fff;
+}
+#footer a.acp:hover {
+	color: #eb8021;
+}
+#footer .accent {
+	color: #eee;
+	font-weight: bold;
 }
